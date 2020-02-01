@@ -1,0 +1,4 @@
+//no graph
+bazel query --notool_deps --noimplicit_deps 'deps(//main:Cpp17_tut)' \--output graph
+//Genetate graph
+xdot <(bazel query --notool_deps --noimplicit_deps 'deps(//main:Cpp17_tut)' \--output graph)
